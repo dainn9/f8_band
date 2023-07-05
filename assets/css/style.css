@@ -26,33 +26,83 @@ html {
 }
 
 #nav{
+    display: inline-block;
+}
 
-
+#nav > li {
+    display: inline-block;
 }
 
 #nav li {
-    display: inline-block;
+    
+    position: relative;
 }
 
-#nav li a {
+#nav > li > a {
+    text-transform: uppercase;
     color: #fff;
+}
+
+#nav > li  a {
     text-decoration: none;
     line-height: 46.5px;
     padding: 0 24px;
-    display: inline-block;
+    display: block;
 }
 
-#nav li:hover a{
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 16px;
+    line-height: 38.5px;
+}
+
+#nav .subnav li:hover, 
+#nav > li:hover > a{
     color: #000;
     background-color: #ccc;
 }
 
+#nav li:hover .subnav {
+    display: block;
+}
+
 #nav .subnav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
 }
 
 #slider {
-
+    height: 500px;
+    background-color: #ccc;
 }
 
 #conten {
